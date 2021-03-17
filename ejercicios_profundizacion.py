@@ -23,17 +23,18 @@ def ej1():
     Calcule la diferencia entre ellos e informe por pantalla
     si el resultado es positivo, negativo o cero.
     '''
-    print('Ingrese primer numero')
-    numero_1 = float(input())
-    print('Ingrese segundo numero')
-    numero_2 = float(input())
-    resultado = numero_1 - numero_2
-    if resultado > 0:
-        print('El resultado es positivo')
-    elif resultado < 0:
-        print('El resultado es negativo')
+    numero_1 = int(input('Ingrese el primer número:\n'))
+    numero_2 = int(input('Ingrese el primer número:\n'))
+    resta = numero_1 - numero_2
+
+    if resta > 0:
+        print("el número es positivo:", resta)
     else:
-        print('El resultado es cero')
+        if resta < 0:
+            print("el número es negativo:", resta)
+        else:
+            print("el número es cero:", resta)
+
 
 def ej2():
     print('Ejercicios de práctica con números')
@@ -44,22 +45,26 @@ def ej2():
     o impar.
     Para cada caso imprimir el resultado en pantalla.
     '''
-    numero_1 = int(input('Ingrese primer numero:\n'))
-    numero_2 = int(input('Ingrese segundo numero:\n'))
-    numero_3 = int(input('Ingrese tercer numero:\n'))
-    
+    numero_1 = int(input('Ingrese el primer número:\n'))
+    numero_2 = int(input('Ingrese el segundo número:\n'))
+    numero_3 = int(input('Ingrese el tercer número:\n'))
+
     if numero_1 % 2 == 0:
-        print('primer numero es par')
+        print("es par")
     else:
-        print('primer numero es impar')
+        print("es impar")
+    
     if numero_2 % 2 == 0:
-        print('segundo numero es par')
+        print("es par")
     else:
-        print('segundo numero es impar')
+        print("es impar")
+    
     if numero_3 % 2 == 0:
-        print('tercer numero es par')
+        print("es par")
     else:
-        print('tercer numero es impar')
+        print("es impar")
+    
+
 
 def ej3():
     print('Ejercicios de práctica con números')
@@ -77,27 +82,30 @@ def ej3():
     Se debe efectuar el cálculo correcto según la operación ingresada por consola
     Imprimir en pantalla la operación realizada y el resultado
     '''
-    print('Ingrese primer numero')
-    numero1 = float(input())
-    print('Ingrese Operador')
-    operador = str(input())
-    print('Ingrese segundo numero')
-    numero2 = float(input())
-    if operador == '+':
-        resultado = numero1 + numero2
-        print('{} {} {} es {}'.format(numero1,operador,numero2,resultado))
-    elif operador == '-':
-        resultado = numero1 - numero2
-        print('{} {} {} es {}'.format(numero1,operador,numero2,resultado))
-    elif operador == '*':
-        resultado = numero1 * numero2
-        print('{} {} {} es {}'.format(numero1,operador,numero2,resultado))
-    elif operador == '/':
-        resultado = numero1 / numero2
-        print('{} {} {} es {}'.format(numero1,operador,numero2,resultado))
-    elif operador == '**':
-        resultado = numero1 ** numero2
-        print('{} {}(Elevado) a {} es {}'.format(numero1,operador,numero2,resultado))
+    numero_1 = int(input('Ingrese el primer número:\n'))
+    numero_2 = int(input('Ingrese el segundo número:\n'))
+    operacion = str(input('Ingrese la operacion:\n'))
+
+    if operacion == "+":
+        resultado_suma = numero_1 + numero_2
+        print(resultado_suma)
+    else:
+        if operacion == "-":
+            resultado_resta = numero_1 - numero_2
+            print(resultado_resta)
+        else: 
+            if operacion == "*":
+                resultado_multiplicacion = numero_1 * numero_2
+                print(resultado_multiplicacion)
+            else:
+                if operacion == "/":
+                    resultado_division = numero_1 / numero_2
+                    print(resultado_division)
+                else:
+                    if operacion == "**":
+                        resultado_exponente = numero_1**numero_2
+                        print(resultado_exponente)
+
 
 def ej4():
     print('Ejercicios de práctica con cadenas')
@@ -114,34 +122,50 @@ def ej4():
     Si se ingresa "2" por consola se deben ordenar las 3 palabras por cantidad de letras
     e imprimir en pantalla de la mayor a la menor
     '''
-    # Use array/listas para este caso
+    texto_1 = str(input('Ingrese la primera palabra:\n'))
+    texto_2 = str(input('Ingrese la segunda palabra:\n'))
+    texto_3 = str(input('Ingrese la tercera palabra:\n'))
+    ordenamiento = str(input('ingrese tipo de ordenamiento:\n'))
 
-    palabras = [str(input('Ingrese primera palabra \n')),
-    str(input('Ingrese segunda palabra \n')),str(input('Ingrese tercera palabra \n'))]
-    orden = int(input('Presione 1 para ordenar alfabeticamente de (A-Z) \n'
-                      'Presione 2 para ordenar alfabeticamente de (Z-A) \n'
-                      'Presione 3 para ordenar por cantidad de letras (-/+) \n'
-                      'Presione 4 para ordenar por cantidad de letras (+/-) \n'))
-    # En este caso se me ocurrio usarlo con el metodo sort no con operador >
-    # y agregar mas opciones
+    if texto_1[0] > texto_2[0] and texto_2[0] > texto_3[0] and ordenamiento == "1":
+        print(texto_1, texto_2, texto_3)
+    else:
+        if texto_2[0] > texto_1[0] and texto_1[0] > texto_3[0] and ordenamiento == "1":
+            print(texto_2, texto_1, texto_3)
+        else:
+            if texto_1[0] > texto_2[0] and texto_3[0] > texto_2[0] and ordenamiento == "1":
+                print(texto_1, texto_3, texto_2)
+            else:
+                if texto_3[0] > texto_2[0] and texto_2[0] > texto_1[0] and ordenamiento == "1":
+                    print(texto_3, texto_2, texto_1)
+                else:
+                    if texto_2[0] > texto_1[0] and texto_3[0] > texto_1[0] and ordenamiento == "1":
+                        print(texto_2, texto_3, texto_1)
+                    else:
+                        if texto_3[0] > texto_2[0] and texto_1[0] > texto_2[0] and ordenamiento == "1":
+                            print(texto_3, texto_1, texto_2)                
     
-    if orden == 1:
-        palabras.sort()
-        print(palabras)
-    elif orden == 2:
-        palabras.sort(reverse=True)
-        print(palabras)
-    elif orden == 3:
-        palabras.sort(key=len)
-        print(palabras)
-    elif orden == 4:
-        palabras.sort(key=len, reverse=True)
-        print(palabras)
+    
+    if len(texto_1) > len(texto_2) and len(texto_2) > len(texto_3) and ordenamiento == "2":
+        print(texto_1, texto_2, texto_3)
+    else:
+        if len(texto_2) > len(texto_1) and len(texto_1) > len(texto_3) and ordenamiento == "2":
+            print(texto_2, texto_1, texto_3)
+        else:
+            if len(texto_1) > len(texto_2) and len(texto_3) > len(texto_2) and ordenamiento == "2":
+                print(texto_1, texto_3, texto_2)
+            else:
+                if len(texto_3) > len(texto_2) and len(texto_2) > len(texto_1) and ordenamiento == "2":
+                    print(texto_3, texto_2, texto_1)
+                else:
+                    if len(texto_2) > len(texto_1) and len(texto_3) > len(texto_1) and ordenamiento == "2":
+                        print(texto_2, texto_3, texto_1)
+                    else:
+                        if len(texto_3) > len(texto_2) and len(texto_1) > len(texto_2) and ordenamiento == "2":
+                            print(texto_3, texto_1, texto_2)    
 
- 
+
 def ej5():
-    # Importe statistics para poder hacer el promedio del array 
-    import statistics
     print('Ejercicios de práctica con números')
 
     '''
@@ -153,25 +177,36 @@ def ej5():
 
     En cada caso imprimir en pantalla el resultado
     '''
-    temperaturas = [float(input('Ingrese primera temperatura \n')),
-                    float(input('Ingrese segunda temperatura \n')),
-                    float(input('Ingrese tercera temperatura \n'))]
-        
-    datos = int(input('Presione 1 para saber cual es la maxima temperatura: \n'
-                      'Presione 2 para saber cual es la temperatura minima: \n'
-                      'Presione 3 para saber cual es el promedio de temperatura: \n'))
-    if datos == 1:
-        print('La temperatura maxima es', max(temperaturas))
-    elif datos == 2:
-        print('La temperatura minima es', min(temperaturas))
-    elif datos == 3:
-        promedio = statistics.mean(temperaturas)
-        print('El promedio de temperaturas es de', promedio)
+    temperatura_1 = int(input('Ingrese la primera temperatura:\n'))
+    temperatura_2 = int(input('Ingrese la segunda temperatura:\n'))
+    temperatura_3 = int(input('Ingrese la tercera temperatura:\n'))
+    promedio = (temperatura_1 + temperatura_2 + temperatura_3) / 3
+
+    if temperatura_1 > temperatura_2 and temperatura_2 > temperatura_3:
+        print("la maxima temperatura es:", temperatura_1,", la minima es:", temperatura_3, "y el promedio es:", promedio)
+    else:
+        if temperatura_2 > temperatura_1 and temperatura_1 > temperatura_3:
+           print("la maxima temperatura es:", temperatura_2,", la minima es:", temperatura_3, "y el promedio es:", promedio) 
+        else:
+            if temperatura_3 > temperatura_2 and temperatura_2 > temperatura_1:
+               print("la maxima temperatura es:", temperatura_3,", la minima es:", temperatura_1, "y el promedio es:", promedio)
+            else:
+                if temperatura_3 > temperatura_1 and temperatura_1 > temperatura_2:
+                    print("la maxima temperatura es:", temperatura_3,", la minima es:", temperatura_2, "y el promedio es:", promedio)
+                else:
+                    if temperatura_1 > temperatura_3 and temperatura_3 > temperatura_2:
+                        print("la maxima temperatura es:", temperatura_1,", la minima es:", temperatura_2, "y el promedio es:", promedio)
+                    else:
+                        if temperatura_2 > temperatura_3 and temperatura_3 > temperatura_1:
+                            print("la maxima temperatura es:", temperatura_2,", la minima es:", temperatura_1, "y el promedio es:", promedio)
+
+
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
-    ej1()
-    ej2()
-    ej3()
-    ej4()
+    #ej1()
+    #ej2()
+    #ej3()
+    #ej4()
     ej5()
+
