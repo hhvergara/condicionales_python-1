@@ -25,10 +25,11 @@ def ej1():
     numero_1 = int(input('Ingrese el primer número:\n'))
 
     numero_2 = int(input('Ingrese el segundo número:\n'))
+    numero_2 = int(input('Ingrese el segundo número:\n'))
 
     # Compare cual de los dos números es mayor
     # Imprima en pantalla según corresponda
-
+    
     # Verifique si el numero_1 positivo, negativo o cero
     # Imprima el resultado en cada caso
 
@@ -126,7 +127,7 @@ def ej4():
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
-    #ej1()
-    #ej2()
-    #ej3()
-    #ej4()
+    ej1()
+    ej2()
+    ej3()
+    ej4()
