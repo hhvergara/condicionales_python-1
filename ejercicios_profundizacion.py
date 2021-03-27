@@ -132,8 +132,10 @@ def ej4():
     else:
         if texto_2[0] > texto_1[0] and texto_1[0] > texto_3[0] and ordenamiento == "1":
             print(texto_2, texto_1, texto_3)
+            
         else:
             if texto_1[0] > texto_2[0] and texto_3[0] > texto_2[0] and ordenamiento == "1":
+                # Acá entra si texto_3 > texto_1 !!!
                 print(texto_1, texto_3, texto_2)
             else:
                 if texto_3[0] > texto_2[0] and texto_2[0] > texto_1[0] and ordenamiento == "1":
