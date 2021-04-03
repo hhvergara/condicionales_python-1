@@ -94,7 +94,7 @@ Suma (+)
 Resta (-)
 Multiplicación (*)
 División (/)
-Exponente/Potencia (**)""")
+Exponente/Potencia (**)"")
 operacion = str(input())    
 if operacion == "+":
     print("la suma del primer numero y el segundo numero da:", primer + segundo)
@@ -104,7 +104,7 @@ elif operacion == "*":
     print("la multiplicacion del primer numero y el segundo numero da:", primer * segundo)
 elif operacion == "/":
     print("la division del primer numero y el segundo numero da:", primer / segundo)
-else operacion == "**":
+else operacion == "**"
     print("La exponencianzion del primer numero y el segundo numero da:", primer ** segundo)
 
 def ej4():
