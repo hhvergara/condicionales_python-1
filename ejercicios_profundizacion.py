@@ -163,7 +163,7 @@ total= cantidad_1,cantidad_2,cantidad_3
 print("el maximo es:", max(total))
 print("el minimo es:", min(total))
 promedio= (cantidad_1+cantidad_2+cantidad_3) /3
-print("el promedio es:", promedio)
+print('el promedio es:,' promedio)
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
