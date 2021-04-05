@@ -27,7 +27,7 @@ def ej1():
     num_1 = int(input("Ingrese un número: "))
     num_2 = int(input("Ingrese otro número: "))
 
-    r = num_1 % num_2
+    r = num_1 % num_2 # --> Aquí tendría que ser num_1 - num_2 sino está devolviendo el resto de una división entera.
 
     if r > 0:
         print("Su resultado es positivo!",r)
