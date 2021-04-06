@@ -190,7 +190,8 @@ def ej3():
         print("B, porque su puntaje es =", puntaje)
     if puntaje > 90:
         print("A, porque su puntaje es =", puntaje)
-
+    
+    # Inovetip: Qué pasa si el puntaje  es 90?? :D
 
 
     # Si el puntaje es mayor igual a 90 --> imprimir A
