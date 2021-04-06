@@ -25,8 +25,9 @@ def ej1():
     numero_1 = int(input('Ingrese el primer número:\n'))
 
     numero_2 = int(input('Ingrese el segundo número:\n'))
-    if numero_1 > numero_2
-    print("el numero", el numero_1 ,"es mayor que", numero_2)
+    if numero_1 > numero_2: # <-- falta el dos puntos!
+        #falta el espacio!
+        print("el numero", el numero_1 ,"es mayor que", numero_2)
     else
         print("el numero", numero_2 ,"es mayor que", numero_1) 
     # Compare cual de los dos números es mayor
@@ -38,7 +39,7 @@ def ej1():
     
     if numero_1 > 0:
         print(numero_1, "es positivo")
-    elif numero_1 < 0:
+    elif numero_1 < 0: # <-- Falta la condición al entrar al elif!
     else:
         print(numero_1, 'y es 0') 
 
@@ -86,11 +87,13 @@ def ej2():
     pasa_len2 = len(texto_2)
 
     if texto_1 > texto_2:
-    print(texto_1,"tiene mayor cantidad de letras que",texto_2)
-    print("porque tiene:",pasa_len,"caracteres")
+        # Acá faltan los espacios del indentado
+        print(texto_1,"tiene mayor cantidad de letras que",texto_2)
+        print("porque tiene:",pasa_len,"caracteres")
     else:
-    print(texto_2,"tiene mayor cantidad de letras que",texto_1)
-    print("porque tiene:",pasa_len2,"caracteres")
+        # Acá faltan los espacios del indentado
+        print(texto_2,"tiene mayor cantidad de letras que",texto_1)
+        print("porque tiene:",pasa_len2,"caracteres")
     
     if texto_1[0] > texto_2[0]:
         print('primera letra de texto 1',texto_1,'es mayor a primer letra de', texto_2)
@@ -106,13 +109,16 @@ def ej2():
     if copia_texto_1 == texto_1:
         print("son iguales las dos variables")  
     # Imprima en pantalla según corresponda
-    print(copia_texto_1,texto_1)
+    
+    #Falta el espacio en el indentado
+        print(copia_texto_1,texto_1)
+        
     # Verifique que copia_texto_1 es distinta a texto_2
     # Imprima en pantalla según corresponda
     if copia_texto_1 == texto_1:
         print("son iguales las dos variables")        
     if copia_texto_1 != texto_2:
-      print("diferente!!")    
+        print("diferente!!")  # <-- Acá faltan 2 espacios :D  
  
 def ej3():
     # Ejercicios de práctica numérica
@@ -134,7 +140,7 @@ def ej3():
         print('resp2')
 
     if not numero_1 > 5 and numero_2 > 5:
-    print('resp 3')
+        print('resp 3') # <-- Acá faltan los espacios
     else:
         print('resp 4')
     #  --> En caso negativo (numero_1 no es mayor a 5)
@@ -164,7 +170,18 @@ def ej3():
                     print("D")
                     if puntaje < 60:
                         print("F")
-
+    
+    # Como está planteado el condicional, si el puntaje es 90 (por ejemplo) imprime A, luego B y luego C,
+    # Porque cada "if" no descarta al anterior, y sigue metiendose en los demás condicionales.
+    # para esta estructura te conviene más usar un "if-else" o un "elif"
+    # así:
+    # if puntaje >=90:
+    #     print("A")
+    # else:
+    #     if puntaje >= 80:
+    #         print("B")
+    
+    
 def ej4():
     # Ejemplos variables de texto
 
