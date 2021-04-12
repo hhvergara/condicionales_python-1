@@ -66,6 +66,14 @@ def ej1():
                 print('el', numero_2, 'es menor a 10 y el', numero_1, 'no')
             
         # es mayor a -2
+        
+    # Ojo que en este condicional te pide:
+    # if numero_1 < 10 or numero_2 > -2:
+    #     print("Se cumple la condición")
+    # else:
+    #     print("No se cumple la condición")
+    
+    
     # Imprima en pantalla si se cumple o no la condición
 
 
@@ -129,7 +137,7 @@ def ej3():
     #       --> En caso afirmativo imprima en pantalla "Resp=3"
     #       --> En caso negativo imprima en pantalla "Resp=4"
     if numero_1 > 5:
-        if numero_2 >=0:
+        if numero_2 >=0: # Aquí se te escapó el = :D
             print('Resp=1')
         else:
             print('Resp=2')
