@@ -16,4 +16,6 @@ __Ejercicios para que el alumno profundice sobre el tema durante la semana__\
 ejercicios_profundizacion.py
 
 # Consultas
-alumnos@inove.com.ar
+alumnos@inove.com.ar 
+
+Cambio de prueba para clase de Python.
